@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       run: raj-app
-  replicas: 1
+  replicas: 3
   template:
     metadata:
       labels:
@@ -15,8 +15,6 @@ spec:
     spec:
       containers:
       - name: raj-app
-        image: task1a_app:v1
+        image: task1a_app:latest
         ports:
         - containerPort: 8080
-
----
