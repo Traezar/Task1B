@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: raj-app
+spec:
+  selector:
+    matchLabels:
+      run: raj-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: raj-app
+        app: raj-app
+    spec:
+      containers:
+      - name: raj-app
+        image: task1a_app:v1
+        ports:
+        - containerPort: 8080
+
+---

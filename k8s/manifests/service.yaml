@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: raj-network
+spec:
+  selector:
+    app: raj-app
+  ports:
+  - name: raj-service-port
+    protocol: TCP
+    port: 80
+    targetPort: 8080
